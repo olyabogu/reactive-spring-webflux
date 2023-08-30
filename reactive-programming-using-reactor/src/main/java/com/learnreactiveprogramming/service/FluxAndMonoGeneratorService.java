@@ -23,7 +23,8 @@ public class FluxAndMonoGeneratorService {
 
     public Flux<String> namesFlux_map(int lenght) {
         return Flux.fromIterable(List.of("alex", "ben", "chloe"))
-                .map(String::toUpperCase).filter(s -> s.length() > lenght).log();
+                .map(String::toUpperCase).filter(s -> s.length() > lenght)
+                .map(s -> s.length() + "-" + s).log();
     }
 
     public Flux<String> namesFlux_immutability() {

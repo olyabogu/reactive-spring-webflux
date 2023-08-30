@@ -21,7 +21,7 @@ class FluxAndMonoGeneratorServiceTest {
     void namesFlux_map() {
         var namesFlux = service.namesFlux_map(3);
         StepVerifier.create(namesFlux)
-                .expectNext("ALEX", "CHLOE")
+                .expectNext("4-ALEX", "5-CHLOE")
 //                .expectNextCount(3)
                 .verifyComplete();
     }
